@@ -1,0 +1,59 @@
+body {
+  color: black;
+}
+
+.img {
+  background-image: url("/src/Img/samsung-memory-m587InP07os-unsplash.jpg");
+  width: 360px;
+  height: 480px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1em 2em;
+  color: white;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.btn__primary {
+  background: #3f637d;
+}
+.btn__primary:hover, .btn__primary:focus {
+  background: #2b4355;
+}
+.btn__secondary {
+  background: #4c4171;
+}
+.btn__secondary:hover, .btn__secondary:focus {
+  background: #2b2541;
+}
+.btn__accent {
+  background: #efca5d;
+}
+.btn__accent:hover, .btn__accent:focus {
+  background: #d1a215;
+}
+
+/*
+.card {
+  padding: 1rem;
+
+    &__title {
+		font-size: 3rem;
+    }
+
+	&__subtitle {
+		font-size: 1.75rem;
+	}
+
+	&__body {
+    color: #333;
+  }
+}
+*/
+
+/*# sourceMappingURL=style.css.map */

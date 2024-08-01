@@ -1,0 +1,220 @@
+$clr-pri: black;
+$clr-primary : #ff0000;
+$clr-secondary : #0000ff;
+
+body {
+  color: $clr-pri;
+}
+
+$gradient: linear-gradient(45deg, $clr-primary, $clr-secondary);
+
+.img {
+    background-image: url("/src/Img/samsung-memory-m587InP07os-unsplash.jpg");
+    width: 360px;
+    height: 480px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+// //Var define var - globe scoped
+
+/*
+    Application - global adjustable values
+--------------------    
+    Color values
+
+    Font sizes
+
+    Spacing values
+
+    Box shadows
+
+    Gradients
+
+    Border radii
+
+*/
+// $gradient : linear-gradient(45deg, $clr-primary, $clr-secondary);
+
+// //Block scoped 
+// .header {
+//   color: $gradient; 
+
+//   &-nav-link {
+//     color: $clr-pri;
+//   }
+// }
+
+// $clr-font-pri : $clr-pri;
+
+//Nesting media queries
+
+// .product-card {
+//   padding: 0.5rem;
+//   border-radius: 1rem;
+//   box-shadow: 0 0 1em rgb(0, 0, 0, 0.2);
+
+//   &__title {
+//     font-size: 1.5rem;
+//   }
+
+//   @media (min-width: 45em) {
+//     padding: 0.75rem;
+//   }
+
+//   @media (min-width: 60rem) {
+//     padding: 1rem;
+//     display: flex;
+
+//     &__title {
+//       font-size: 2.5rem;
+//     }
+//   }
+// }
+
+//Trailing or use has
+
+// .text-centered {
+//     text-align: center;
+// }
+
+// .text-centered:has(p){
+//     max-width: 60ch;
+// }
+
+// p {
+//   max-width: 60ch;
+//   line-height: 1.5rem;
+
+//   .text-centered & {
+//     margin-inline: auto;
+//   }
+// }
+
+// .text-centered {
+//   text-align: center;
+// }
+
+// .btn {
+//   display: inline-block;
+//   padding: 1em 2em;
+//   color: white;
+//   cursor: pointer;
+//   border: none;
+//   text-decoration: none;
+//   text-transform: uppercase;
+
+//   &__primary {
+//     background: #3f637d;
+
+//     &:hover,
+//     &:focus {
+//       background: #2b4355;
+//     }
+//   }
+
+//   &__secondary {
+//     background: #4c4171;
+
+//     &:hover,
+//     &:focus {
+//       background: #2b2541;
+//     }
+//   }
+
+//   &__accent {
+//     background: #efca5d;
+
+//     &:hover,
+//     &:focus {
+//       background: #d1a215;
+//     }
+//   }
+// }
+
+//BEM / BLOCK ELEMENT MODIFIER
+
+/*
+.card {
+  padding: 1rem;
+
+    &__title {
+		font-size: 3rem;
+    }
+
+	&__subtitle {
+		font-size: 1.75rem;
+	}
+
+	&__body {
+    color: #333;
+  }
+}
+*/
+
+// Nesting css properties
+
+// a {
+//     text: {
+//         transform: uppercase;
+//         decoration: none
+//     }
+// }
+
+// Nesting selectors
+
+// .primary-article {
+//     padding: 3rem 1rem;
+
+//     .title {
+//         font-size: 5rem;
+
+//         span {
+//             color: red;
+//         }
+//     }
+// }
+
+// .pointing-list {
+//     margin: 2rem 0;
+
+//     li {
+//         padding-left: 0.5rem;
+//     }
+
+//     li::marker {
+//         content: "👉";
+//     }
+// }
+// .primary-navigation {
+//     padding: 1rem;
+
+//     ul {
+//         display: flex;
+//         gap: 1rem;
+//         margin: 0;
+//         padding: 0;
+//     }
+
+//     a {
+//         text-overflow: uppercase;
+//     }
+// }
+
+// .card {
+//     position: relative;
+//     padding: 1rem;
+
+//     & .title {
+//         font-size: 2rem;
+
+//         &__::after {
+//             content: '';
+//             background-color: lime;
+//             display: block;
+//             height: 1px;
+//         }
+//     }
+// }
