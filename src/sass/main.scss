@@ -2,8 +2,8 @@ $clr-pri: black;
 $clr-primary : #ff0000;
 $clr-secondary : #0000ff;
 
-body {
-  color: $clr-pri;
+:root {
+  --clr-primary: limegreen;
 }
 
 $gradient: linear-gradient(45deg, $clr-primary, $clr-secondary);
@@ -16,6 +16,108 @@ $gradient: linear-gradient(45deg, $clr-primary, $clr-secondary);
     background-size: contain;
 }
 
+$clr-white: #f8f7f7;
+$clr-black: #201e1f;
+$clr-red: #da3f0b;
+$card-width: 640px;
+$radii: 5px;
+$btn-width: 120px;
+$btn-height: 40px;
+
+$bx-sh : 1px 1px 15px -5px $clr-black;
+
+body {
+  color: $clr-black;
+  background-color: $clr-white;
+}
+
+.card {
+  max-width: $card-width;
+  height: min-content;
+  padding: 25px 30px;
+  margin-bottom: 50px;
+
+  box-shadow: $bx-sh;
+
+  &__title {
+    color: $clr-red;
+  }
+
+  &__cta {
+    width: max-content;
+    height: 50px;
+    display: flex;
+  }
+
+  &__btn {
+    width: $btn-width;
+    height: $btn-height;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:link{
+      text-decoration: none;
+    }
+  }
+}
+
+.btn{
+  &--primary {
+    background-color: $clr-red;
+    color: $clr-white;
+
+  }
+
+  &--outline {
+    color: $clr-red;
+  }
+
+  &--primary,
+  &--outline {
+    border-radius: $radii;
+    border: 2px solid $clr-red;
+
+    &:hover {
+      background-color: $clr-black;
+      box-shadow: $bx-sh;
+    }
+  }
+}
+
+
+
+
+
+/*
+# Colors
+
+## White: #f8f7f7
+
+- page background
+- primary button text color
+- outline button background
+- hover text color for both buttons
+
+## Black: #201e1f
+
+- body color
+- button hover/focus background
+- shadow color on the card
+
+## Red: #da3f0b
+
+- title color
+- button borders (both buttons)
+- primary button background
+- outline button text color
+- button hover/focus shadow
+
+*/
+
+
+// var(--clr) - are rendered live in the browser which open the possiblity of js
 
 
 // //Var define var - globe scoped
@@ -35,7 +137,10 @@ $gradient: linear-gradient(45deg, $clr-primary, $clr-secondary);
 
     Border radii
 
+    Media query
+
 */
+
 // $gradient : linear-gradient(45deg, $clr-primary, $clr-secondary);
 
 // //Block scoped 

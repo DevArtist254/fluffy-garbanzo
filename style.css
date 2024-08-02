@@ -1,5 +1,5 @@
-body {
-  color: black;
+:root {
+  --clr-primary: limegreen;
 }
 
 .img {
@@ -10,34 +10,97 @@ body {
   background-size: contain;
 }
 
-.btn {
-  display: inline-block;
-  padding: 1em 2em;
-  color: white;
-  cursor: pointer;
-  border: none;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-.btn__primary {
-  background: #3f637d;
-}
-.btn__primary:hover, .btn__primary:focus {
-  background: #2b4355;
-}
-.btn__secondary {
-  background: #4c4171;
-}
-.btn__secondary:hover, .btn__secondary:focus {
-  background: #2b2541;
-}
-.btn__accent {
-  background: #efca5d;
-}
-.btn__accent:hover, .btn__accent:focus {
-  background: #d1a215;
+body {
+  color: #201e1f;
+  background-color: #f8f7f7;
 }
 
+.card {
+  max-width: 640px;
+  height: min-content;
+  padding: 25px 30px;
+  margin-bottom: 50px;
+  box-shadow: 1px 1px 15px -5px #201e1f;
+}
+.card__title {
+  color: #da3f0b;
+}
+.card__cta {
+  width: max-content;
+  height: 50px;
+  display: flex;
+}
+.card__btn {
+  width: 120px;
+  height: 40px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__btn:link {
+  text-decoration: none;
+}
+
+.btn--primary {
+  background-color: #da3f0b;
+  color: #f8f7f7;
+}
+.btn--outline {
+  color: #da3f0b;
+}
+.btn--primary, .btn--outline {
+  border-radius: 5px;
+  border: 2px solid #da3f0b;
+}
+.btn--primary:hover, .btn--outline:hover {
+  background-color: #201e1f;
+  box-shadow: 1px 1px 15px -5px #201e1f;
+}
+
+/*
+# Colors
+
+## White: #f8f7f7
+
+- page background
+- primary button text color
+- outline button background
+- hover text color for both buttons
+
+## Black: #201e1f
+
+- body color
+- button hover/focus background
+- shadow color on the card
+
+## Red: #da3f0b
+
+- title color
+- button borders (both buttons)
+- primary button background
+- outline button text color
+- button hover/focus shadow
+
+*/
+/*
+    Application - global adjustable values
+--------------------    
+    Color values
+
+    Font sizes
+
+    Spacing values
+
+    Box shadows
+
+    Gradients
+
+    Border radii
+
+    Media query
+
+*/
 /*
 .card {
   padding: 1rem;
