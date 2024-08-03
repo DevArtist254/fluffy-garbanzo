@@ -2,6 +2,10 @@
   --clr-primary: limegreen;
 }
 
+.bg-red-50 {
+  background-color: rgba(221, 63, 49, 0.5);
+}
+
 .img {
   background-image: url("/src/Img/samsung-memory-m587InP07os-unsplash.jpg");
   width: 360px;
@@ -20,7 +24,7 @@ body {
   height: min-content;
   padding: 25px 30px;
   margin-bottom: 50px;
-  box-shadow: 1px 1px 15px -5px #201e1f;
+  box-shadow: 1px 1px 10px -5px #201e1f;
 }
 .card__title {
   color: #da3f0b;
@@ -55,7 +59,7 @@ body {
 }
 .btn--primary:hover, .btn--outline:hover {
   background-color: #201e1f;
-  box-shadow: 1px 1px 15px -5px #201e1f;
+  box-shadow: 1px 1px 10px -5px #201e1f;
 }
 
 /*

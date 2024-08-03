@@ -8,6 +8,12 @@ $clr-secondary : #0000ff;
 
 $gradient: linear-gradient(45deg, $clr-primary, $clr-secondary);
 
+$red: hsl(5, 72%, 53%);
+
+.bg-red-50 {
+  background-color: rgb($red, 0.5);
+}
+
 .img {
     background-image: url("/src/Img/samsung-memory-m587InP07os-unsplash.jpg");
     width: 360px;
@@ -24,7 +30,7 @@ $radii: 5px;
 $btn-width: 120px;
 $btn-height: 40px;
 
-$bx-sh : 1px 1px 15px -5px $clr-black;
+$bx-sh : 1px 1px 10px -5px $clr-black;
 
 body {
   color: $clr-black;
