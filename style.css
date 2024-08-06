@@ -1,3 +1,60 @@
+.box-blue-100 {
+  background: blue;
+  width: 100px;
+  aspect-ratio: 1/1;
+}
+.box-green-150 {
+  background: green;
+  width: 150px;
+  aspect-ratio: 1/1;
+}
+.box-red-200 {
+  background: red;
+  width: 200px;
+  aspect-ratio: 1/1;
+}
+
+/*
+
+//Agr in mixins
+
+@mixin fs-heading($fs-size){
+  font-size: $fs-size;
+}
+
+.page-title {
+  @include fs-heading($fs-size: 10px);
+  @include fs-heading(10px);
+  line-height: 1.1;
+  @include small-uppercase-span;
+}
+
+*/
+/*
+
+// Default args
+
+@mixin linearGradient($deg: -45deg, $clr-1: red, $clr-2: blue) {
+  background-image: linear-gradient($deg, $clr-1, $clr-2);
+}
+
+// When only some arguments are optional
+@mixin linear-gradient($clr-1, $clr-2, $deg: -45deg) {
+  background-image: linear-gradient($deg, $clr-1, $clr-2);
+}
+
+.hero {
+  @include linearGradient;
+}
+
+//Overwriting
+
+.call to action {
+  @include linearGradient($clr-2);
+}
+
+
+*/
 :root {
   --clr-primary: limegreen;
 }

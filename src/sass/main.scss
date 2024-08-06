@@ -1,6 +1,116 @@
+// Interpolation - templating strings against var
+
+$color-r: red;
+$color-g: green;
+$color-b: blue;
+
+$width : 100;
+
+// .#{$color-p} {      // .red {color: red}
+//   color: $color-p;  
+// }
+
+// .box-#{"" + $color-r}-#{$width} {
+//   background: $color-r;
+//   width: $width;
+//   aspect-ratio: 1 / 1;
+// }
+
+// .box-#{"" + $color-b}-#{$width + 50} {
+//   background: #{$color-b};
+//   width: #{$width + 50};
+//   aspect-ratio: 1 / 1;
+// }
+
+// .box-#{"" + $color-g}-#{$width + 100} {
+//   background: #{$color-g};
+//   width: #{$width + 100};
+//   aspect-ratio: 1 / 1;
+// }
+
+
+@mixin box($color, $size: 1){
+  &-#{"" + $color}-#{$width * $size}{
+    background: #{$color};
+    width: #{$width * $size}px;
+    aspect-ratio: 1 / 1;
+  }
+}
+
+
+.box {
+  @include box($color-b);
+
+  @include box($color-g, 1.5);
+
+  @include box($color-r, 2);
+}
+
+
+// @mixins - store propertys in css but don't output till called @include
+
+@mixin uppercase-bold-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@mixin small-uppercase-span {
+  span {
+    font-size: 0.875em;
+    text-transform: uppercase;
+  }
+}
+
+// @mixin example($arg) {
+//   property: $arg;
+// }
+
+/*
+
+//Agr in mixins
+
+@mixin fs-heading($fs-size){
+  font-size: $fs-size;
+}
+
+.page-title {
+  @include fs-heading($fs-size: 10px);
+  @include fs-heading(10px);
+  line-height: 1.1;
+  @include small-uppercase-span;
+}
+
+*/
+
+/*
+
+// Default args
+
+@mixin linearGradient($deg: -45deg, $clr-1: red, $clr-2: blue) {
+  background-image: linear-gradient($deg, $clr-1, $clr-2);
+}
+
+// When only some arguments are optional
+@mixin linear-gradient($clr-1, $clr-2, $deg: -45deg) {
+  background-image: linear-gradient($deg, $clr-1, $clr-2);
+}
+
+.hero {
+  @include linearGradient;
+}
+
+//Overwriting
+
+.call to action {
+  @include linearGradient($clr-2);
+}
+
+
+*/
 $clr-pri: black;
-$clr-primary : #ff0000;
-$clr-secondary : #0000ff;
+$clr-primary: #ff0000;
+$clr-secondary: #0000ff;
 
 :root {
   --clr-primary: limegreen;
@@ -15,11 +125,11 @@ $red: hsl(5, 72%, 53%);
 }
 
 .img {
-    background-image: url("/src/Img/samsung-memory-m587InP07os-unsplash.jpg");
-    width: 360px;
-    height: 480px;
-    background-repeat: no-repeat;
-    background-size: contain;
+  background-image: url("/src/Img/samsung-memory-m587InP07os-unsplash.jpg");
+  width: 360px;
+  height: 480px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 $clr-white: #f8f7f7;
@@ -30,7 +140,7 @@ $radii: 5px;
 $btn-width: 120px;
 $btn-height: 40px;
 
-$bx-sh : 1px 1px 10px -5px $clr-black;
+$bx-sh: 1px 1px 10px -5px $clr-black;
 
 body {
   color: $clr-black;
@@ -63,17 +173,16 @@ body {
     justify-content: center;
     align-items: center;
 
-    &:link{
+    &:link {
       text-decoration: none;
     }
   }
 }
 
-.btn{
+.btn {
   &--primary {
     background-color: $clr-red;
     color: $clr-white;
-
   }
 
   &--outline {
@@ -91,10 +200,6 @@ body {
     }
   }
 }
-
-
-
-
 
 /*
 # Colors
@@ -122,9 +227,7 @@ body {
 
 */
 
-
 // var(--clr) - are rendered live in the browser which open the possiblity of js
-
 
 // //Var define var - globe scoped
 
@@ -149,9 +252,9 @@ body {
 
 // $gradient : linear-gradient(45deg, $clr-primary, $clr-secondary);
 
-// //Block scoped 
+// //Block scoped
 // .header {
-//   color: $gradient; 
+//   color: $gradient;
 
 //   &-nav-link {
 //     color: $clr-pri;
@@ -328,4 +431,36 @@ body {
 //             height: 1px;
 //         }
 //     }
+// }
+
+// // https://utopia.fyi/
+// // https://smolcss.dev/
+// // https://moderncss.dev/
+
+// /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,900,64,1.067,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+// :root {
+//   --step--2: clamp(0.7813rem, -0.7262rem + 7.537vw, 3.5134rem);
+//   --step--1: clamp(0.9375rem, -0.6136rem + 7.7554vw, 3.7488rem);
+//   --step-0: clamp(1.125rem, -0.4612rem + 7.931vw, 4rem);
+//   --step-1: clamp(1.35rem, -0.2599rem + 8.0497vw, 4.268rem);
+//   --step-2: clamp(1.62rem, 0.0013rem + 8.0937vw, 4.554rem);
+//   --step-3: clamp(1.944rem, 0.3357rem + 8.0416vw, 4.8591rem);
+//   --step-4: clamp(2.3328rem, 0.7594rem + 7.8671vw, 5.1846rem);
+//   --step-5: clamp(2.7994rem, 1.2917rem + 7.5383vw, 5.532rem);
+//   --step-6: clamp(3.3592rem, 1.956rem + 7.0163vw, 5.9026rem);
+//   --step-7: clamp(4.0311rem, 2.7803rem + 6.2539vw, 6.2981rem);
+// }
+
+// // extend fn - to avoid compliation of alot of code we use the percentage;
+// // Don't use with selectors with high specifity;
+
+// %bg-dark {
+//   background: black;
+//   padding: 1em;
+// }
+
+// .inverted-colors {
+//   color: white;
+//   @extend %bg-dark;
 // }
